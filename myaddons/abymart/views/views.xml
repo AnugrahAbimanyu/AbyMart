@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="abymart.list">
+      <field name="name">Abymart list</field>
+      <field name="model">abymart.abymart</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="abymart.action_window">
+      <field name="name">Abymart window</field>
+      <field name="res_model">abymart.abymart</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="abymart.action_server">
+      <field name="name">Abymart server</field>
+      <field name="model_id" ref="model_abymart_abymart"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Abymart" id="abymart.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="abymart.menu_1" parent="abymart.menu_root"/>
+    <menuitem name="Menu 2" id="abymart.menu_2" parent="abymart.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="abymart.menu_1_list" parent="abymart.menu_1"
+              action="abymart.action_window"/>
+    <menuitem name="Server to list" id="abymart" parent="abymart.menu_2"
+              action="abymart.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_abymart_kelompokbarang,access.abymart.kelompokbarang,model_abymart_kelompokbarang,,1,1,1,1
+access_abymart_barang,access.abymart.barang,model_abymart_barang,,1,1,1,1
+access_abymart_person,access.abymart.person,model_abymart_person,,1,1,1,1
+access_abymart_kasir,access.abymart.kasir,model_abymart_kasir,,1,1,1,1
+access_abymart_supplier,access.abymart.supplier,model_abymart_supplier,,1,1,1,1
+access_abymart_penjualan,access.abymart.penjualan,model_abymart_penjualan,,1,1,1,1
+access_abymart_detailpenjualan,access.abymart.detailpenjualan,model_abymart_detailpenjualan,,1,1,1,1

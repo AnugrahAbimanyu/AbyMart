@@ -1,0 +1,1 @@
+./odoo-bin --addons-path=/home/abimanyu/Documents/MagangHM/AbyMart/addons,/home/abimanyu/Documents/MagangHM/AbyMart/myaddons --xmlrpc-port=8070 --db_port 5432 -d abimanyudb --limit-memory-hard 0 --limit-time-real=10000 -u abymart

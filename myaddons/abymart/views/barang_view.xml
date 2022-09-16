@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- abymart.barang tree view -->
+    <record id="abymart_barang_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Barang</field>
+        <field name="model">abymart.barang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name" />
+                <field name="Harga_Beli" />
+                <field name="Harga_Jual" />
+                <field name="kelompokbarang_id" />
+                <field name="supplier_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- abymart.barang form view -->
+    <record id="abymart_barang_view_form" model="ir.ui.view">
+        <field name="name">Form Barang</field>
+        <field name="model">abymart.barang</field>
+        <field name="arch" type="xml">
+            <form string="Barang">
+                <sheet>
+                    <group name="Barang" string="Barang">
+                        <!-- Add your fields here -->
+                        <field name="name" />
+                        <field name="Harga_Beli" />
+                        <field name="Harga_Jual" />
+                    </group>
+
+                    <group name="Kelompok Barang" string="Kelompok Barang">
+                        <field name="kelompokbarang_id" />
+                    </group>
+
+                    <group name="supplier" string="Supplier">
+                        <field name="supplier_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- abymart.barang action window -->
+    <record id="abymart_barang_action" model="ir.actions.act_window">
+        <field name="name">Daftar Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">abymart.barang</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="abymart_barang_menu_act"
+        name="Daftar Barang"
+        parent="abymart_barang_menu_categ"
+        action="abymart_barang_action"
+        sequence="10"/>
+
+</odoo>

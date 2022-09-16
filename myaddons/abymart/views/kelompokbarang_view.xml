@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- abymart.kelompokbarang tree view -->
+    <record id="abymart_kelompokbarang_view_tree" model="ir.ui.view">
+        <field name="name">abymart.kelompokbarang.view.tree</field>
+        <field name="model">abymart.kelompokbarang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="kode_kelompok"/>
+                <field name="kode_Gudang"/>
+                <field name="jml_item" />
+                <field name="daftar" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- abymart.kelompokbarang form view -->
+    <record id="abymart_kelompokbaranf" model="ir.ui.view">
+        <field name="name">abymart.kelompokbarang.view.form</field>
+        <field name="model">abymart.kelompokbarang</field>
+        <field name="arch" type="xml">
+            <form string="Kelompok Barang">
+                <sheet>
+                    <group name="Kelompok" string="Posisi Kelompok">
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="kode_kelompok"/>
+                        <field name="jml_item" />
+                    </group>
+
+                    <group name="Gudang" string="Posisi Barang">
+                        <field name="kode_Gudang"/>
+                        <field name="barang_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- abymart.kelompokbarang action window -->
+    <record id="abymart_kelompokbarang_action" model="ir.actions.act_window">
+        <field name="name">Kelompok Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">abymart.kelompokbarang</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="abymart_kelompokbarang_menu_act"
+        name="Kelompok Barang"
+        parent="abymart_barang_menu_categ"
+        action="abymart_kelompokbarang_action"
+        sequence="10"/>
+
+</odoo>
